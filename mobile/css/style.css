@@ -1,112 +1,146 @@
 @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700;900&display=swap');
 
-* {
-    padding: 0;
-    margin: 0;
-}
-
+/* font-family: 'Cairo', sans-serif; */
 body {
     font-family: 'Cairo', sans-serif;
+    direction: rtl;
+    overflow-x: hidden;
 }
 
-header.header {
-    background-image: url(../images/bg.jpg);
-    background-position: center;
+section.banner {
+    background-image: url(../image/bg-1.jpg);
     background-size: cover;
+    background-position: center center;
     background-attachment: fixed;
-}
-
-header.header .overlay {
-    background-color: rgba(239, 71, 58, 0.8);
-    padding-top: 90px;
     position: relative;
+    z-index: -1;
+    text-align: right;
 }
 
-header.header .overlay .header-block {
+section.banner .overlay {
+    background-color: rgba(239, 71, 58, 0.8);
+    z-index: -2;
+    position: relative;
+    padding-top: 90px;
+}
+
+section.banner .overlay .images {
+    position: absolute;
+    bottom: -250px;
+    right: 0;
+    z-index: -1;
+}
+
+section.banner .overlay .images img {
+    max-width: 100%;
+}
+
+section.banner .overlay .app-icon img {
     margin-top: 120px;
-}
-
-header.header .overlay .header-block .header-brand {
     margin-bottom: 50px;
 }
 
-header.header .overlay .header-block h1 {
+section.banner .overlay .banner-text h1 {
     font-size: 30px;
-    color: #fff;
-    line-height: 38px;
-    margin-bottom: 60px;
+    color: #ffffff;
+    margin-bottom: 30px;
 }
 
-header.header .overlay .header-block p {
+section.banner .overlay .banner-text p {
     font-size: 18px;
-    line-height: 33px;
-    color: #fff;
-    margin-bottom: 85px;
+    line-height: 32px;
+    color: #ffffff;
+    margin-bottom: 40px;
 }
 
-header.header .overlay .header-buttons a img {
-    width: 250px;
+section.banner .overlay .banner-text button {
+    margin: 40px 0;
+    background-color: #fafafa;
+    line-height: 50px;
 }
 
-header.header .overlay .header-buttons a:last-child img {
-    height: 65px;
+section.banner .overlay .banner-text button img {
+    width: 50px;
+    vertical-align: sub;
 }
 
-header.header .overlay .header-img img {
-    max-width: 100%;
-    position: absolute;
-    bottom: -210px;
+section.banner .overlay .banner-text button i {
+    font-size: 50px;
+}
+
+section.banner .overlay .banner-text button p {
+    font-size: 14px;
+    font-family: 'Cairo', sans-serif;
+    color: #090909;
+    line-height: 25px;
+    display: inline-block;
+}
+
+section.banner .overlay .banner-text button p span {
+    font-size: 18px;
+}
+
+section.banner .overlay .banner-text button:last-child {
+    margin-right: 20px;
 }
 
 section.feature {
+    background-color: #ffffff;
     padding: 80px 0;
-    background-color: #fff;
+    z-index: 20;
     position: relative;
+    text-align: right;
 }
 
 section.feature .features {
     margin-top: 90px;
 }
 
-section.feature .features.text-left {
-    direction: ltr;
-}
-
-section.feature .features .d-flex {
+section.feature .features .media {
     margin-bottom: 70px;
 }
 
-section.feature .features .d-flex .flex-shrink-0 i {
-    width: 70px;
-    height: 70px;
-    line-height: 70px;
-    color: #fff;
-    background-color: #ef473a;
-    text-align: center;
-    display: block;
-    border-radius: 2px;
-}
-
-section.feature .features .d-flex h5 {
+section.feature .features .media-body h5 {
     font-size: 24px;
     color: #080808;
     margin-bottom: 12px;
 }
 
-section.feature .features .d-flex p {
+section.feature .features .media-body p {
     font-size: 15px;
     line-height: 20px;
     color: #757474;
 }
 
-section.feature .feature-img img {
+section.feature .features i {
+    color: #fff;
+    background-color: #ef473a;
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    border-radius: 2px;
+    text-align: center;
+    display: block !important;
+}
+
+section.feature .mobile-img img {
     width: 80%;
+    margin: 0 auto;
+    display: block;
 }
 
 section.option {
-    padding-top: 120px;
-    background-color: #f9f8f8;
+    padding: 120px 0 0;
+    background-color: #f8f8f8;
+    z-index: -2;
     position: relative;
+    text-align: right;
+}
+
+section.option .images {
+    position: absolute;
+    bottom: -150px;
+    z-index: -1;
 }
 
 section.option .options {
@@ -114,46 +148,58 @@ section.option .options {
     margin-right: 40px;
 }
 
-section.option .options .d-flex {
+section.option .options .media {
     margin-bottom: 60px;
 }
 
-section.option .options .d-flex h5 {
+section.option .options .media h5 {
     font-size: 24px;
     line-height: 40px;
     color: #141414;
 }
 
-section.option .options .d-flex p {
+section.option .options .media p {
     font-size: 15px;
     line-height: 20px;
     color: #757474;
 }
 
-section.option .option-img {
-    position: absolute;
-    bottom: -150px;
-}
-
 section.slider {
-    background-color: #fff;
+    background-color: #ffffff;
     padding: 80px 0;
-    position: relative;
 }
 
-section.slider .slider-text h3 {
-    font-size: 36px;
-    color: #141414;
+section.slider .title {
     margin-bottom: 60px;
 }
 
-section.slider .slider-carousel .carousel-inner {
-    width: 60%;
-    margin: auto;
+section.slider .title h3 {
+    font-size: 36px;
 }
 
-section.slider .slider-carousel .carousel-control-prev,
-section.slider .slider-carousel .carousel-control-next {
+section.slider .carousel-inner {
+    width: 60%;
+    margin: 0 auto;
+}
+
+section.slider .carousel-indicators {
+    padding: 0;
+    bottom: -60px;
+}
+
+section.slider .carousel-indicators li {
+    max-width: 20px;
+    height: 20px;
+    border: 1px solid #ef473a;
+    border-radius: 50%;
+}
+
+section.slider .carousel-indicators li.active {
+    background-color: #ef473a;
+}
+
+section.slider .carousel-control-next,
+section.slider .carousel-control-prev {
     width: 70px;
     height: 70px;
     border: 1px solid #ef473a;
@@ -163,263 +209,312 @@ section.slider .slider-carousel .carousel-control-next {
     margin-top: 130px;
 }
 
-section.slider .slider-carousel .carousel-indicators {
-    bottom: -60px;
-}
-
-section.slider .slider-carousel .carousel-indicators button {
-    width: 20px;
-    height: 20px;
-    border: 1px solid #ef473a;
-    border-radius: 50%;
-}
-
-section.slider .slider-carousel .carousel-indicators button.active {
-    background-color: #ef473a;
-}
-
 section.faq {
-    background-image: url(../images/bg-2.jpg);
-    background-position: center;
+    background-image: url(../image/bg-2.jpg);
     background-size: cover;
+    background-position: center center;
     background-attachment: fixed;
-}
-
-section.faq .overlay {
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 70px 0;
-}
-
-section.faq .overlay .faq-title h3 {
-    font-size: 30px;
-    color: #fff;
-    margin-bottom: 60px;
-}
-section.faq .overlay .accordion .accordion-item {
-    background-color: rgba(255, 255, 255, 0.2);
-    margin-bottom: 25px;
-    border: 0;
-    border-radius: 0;
-}
-
-section.faq .overlay .accordion .accordion-item .accordion-header button {
-    background-color: transparent;
-    font-size: 18px;
-    color: #fff;
-    border-bottom: 0;
-}
-
-section.faq .overlay .accordion .accordion-item .accordion-header button::after{
-    content: none;
-}
-
-section.faq .overlay .accordion .accordion-item .accordion-header button i {
-    margin-right: auto;
-}
-
-section.faq .overlay .accordion .accordion-item .accordion-header button.collapsed i {
-    transform: rotate(180deg);
-}
-
-section.faq .overlay .accordion .accordion-item .accordion-header button:focus {
-    border-color: transparent;
-    box-shadow: 0 0 0 0;
-}
-
-section.faq .overlay .accordion .accordion-body p {
-    font-size: 15px;
-    line-height: 20px;
-    color: #c9c9c9;
-}
-
-
-footer.footer {
-    background-color: #232323;
-    padding-top: 70px;
-}
-
-footer.footer .top-footer {
-    border-bottom: 2px solid #292828;
-    padding-bottom: 90px;
-}
-
-footer.footer .top-footer .widget h4 {
-    font-size: 24px;
-    color: #f4f8fb;
-    padding-bottom: 25px;
-    border-bottom: 2px solid #292828;
-    margin-bottom: 35px;
-    position: relative;
-}
-
-footer.footer .top-footer .widget h4::after {
-    content: "";
-    width: 90px;
-    height: 2px;
-    background-color: #ef473a;
-    position: absolute;
-    right: 0;
-    bottom: -1px;
-}
-
-footer.footer .top-footer .widget p.aboutus-p {
-    font-size: 18px;
-    line-height: 40px;
-    color: #757474;
-    margin-bottom: 100px;
-}
-
-footer.footer .top-footer .widget li.list-inline-item a {
-    width: 50px;
-    height: 50px;
-    line-height: 50px;
-    background-color: #353638;
-    color: #fff;
-    display: block;
-    text-align: center;
-    border-radius: 50%;
-    transition: all .5s ease;
-}
-
-footer.footer .top-footer .widget li.list-inline-item a:hover {
-    background-color: #ef473a;
-}
-
-footer.footer .top-footer .widget ul.tweets {
-    list-style: none;
-    padding: 0;
-}
-
-footer.footer .top-footer .widget ul.tweets li:not(:last-child) {
-    padding-bottom: 20px;
-    margin-bottom: 20px;
-    border-bottom: 2px solid #292828;
-}
-
-footer.footer .top-footer .widget ul.tweets li p {
-    font-size: 15px;
-    color: #757474;
-    line-height: 24px;
-    display: inline;
-    margin-right: 5px;
-}
-
-footer.footer .top-footer .widget ul.tweets li i {
-    color: #ef473a;
-}
-
-footer.footer .top-footer .widget form input {
-    font-size: 14px;
-    color: #c6c6c6;
-    line-height: 25px;
-    border: 0;
-    margin-bottom: 15px;
-    background-color: #2c2b2b;
-    border-radius: 0;
     text-align: right;
 }
 
-footer.footer .top-footer .widget form button {
-    font-size: 14px;
-    color: #fff;
-    line-height: 25px;
-    background-color: #ef473a;
-    border-radius: 0;
+section.faq .overlay {
+    padding: 70px 0 80px;
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
-footer.footer .top-footer .widget form .invalid-feedback {
-    margin-top: -15px;
+section.faq .overlay .title {
+    margin-bottom: 60px;
+}
+
+section.faq .overlay .title h3 {
+    font-size: 30px;
+    color: #ffffff;
+}
+
+section.faq .overlay .card {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 0px;
+    border-radius: 0px;
+    margin-bottom: 25px;
+}
+
+section.faq .overlay .card .card-header {
+    border-bottom: 0px;
+    background-color: transparent;
+}
+
+section.faq .overlay .card .card-header h5 a {
+    font-size: 18px;
+    color: #ffffff;
+    display: block;
+    position: relative;
+    text-decoration: none;
+}
+
+section.faq .overlay .card .card-block {
+    font-size: 15px;
+    line-height: 20px;
+    color: #c9c9c9;
+    padding: 0 1.25rem 1.25rem;
+}
+
+section.faq .overlay .card .card-header h5 a i {
+    position: absolute;
+    top: 2px;
+    left: 5px;
+}
+
+section.faq .overlay .card .card-header h5 a.collapsed[aria-expanded="false"] i:before {
+    content: "\f107";
+}
+
+footer {
+    background-color: #232323;
+    overflow: hidden;
+    text-align: right;
+}
+
+footer .footer .widget .title h4 {
+    font-size: 24px;
+    color: #f4f8fb;
+    line-height: 80px;
+}
+
+footer .footer .widget .title {
+    margin-bottom: 35px;
+    border-bottom: 2px solid #272727;
+    position: relative;
+}
+
+footer .footer .widget .title::after {
+    width: 90px;
+    height: 2px;
+    background-color: #ef473a;
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    right: 0;
+    display: inline-block;
+}
+
+footer .footer .widget .content p {
+    font-size: 18px;
+    line-height: 40px;
+    color: #757474;
+}
+
+footer .footer .widget .content ul.social-links li a {
+    width: 50px;
+    height: 50px;
+    display: block;
+    border-radius: 50%;
+    background-color: #353638;
+    color: #fff;
+    text-align: center;
+    line-height: 50px;
+}
+
+footer .footer .widget .content ul.social-links li a:hover {
+    background-color: #ef473a;
+}
+
+footer .footer .widget .content ul.social-links {
+    padding: 0px;
+    margin-top: 95px;
+}
+
+footer .footer .widget .content ul.social-links li {
+    margin-right: 8px;
+}
+
+footer .footer .widget .content ul.twittes {
+    padding: 0;
+}
+
+footer .footer .widget .content ul.twittes li {
+    font-size: 15px;
+    color: #757474;
+    line-height: 24px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #2a2929;
+    position: relative;
+    text-indent: 20px;
+    padding-right: 5px;
+}
+
+footer .footer .widget .content ul.twittes li:last-of-type {
+    margin-bottom: 0px;
+    border-bottom: 0px;
+}
+
+footer .footer .widget .content ul.twittes li::before {
+    content: "\f099";
+    font-family: "Font Awesome 5 Brands";
+    position: absolute;
+    top: 5px;
+    right: -15px;
+    line-height: 1em;
+    color: #ef473a;
+}
+
+footer .footer .widget .content form input {
+    font-size: 14px;
+    color: #c6c6c6 !important;
+    line-height: 25px;
+    background-color: #2c2b2b;
+    font-family: 'Cairo', sans-serif;
+    border-radius: 0;
+    border-color: transparent;
     margin-bottom: 15px;
 }
 
-footer.footer .copyright {
+footer .footer .widget .content form button {
+    font-size: 14px;
+    font-family: 'Cairo', sans-serif;
+    color: #ffffff;
+    line-height: 25px;
+    background-color: #ef473a;
+    border-radius: 0;
+    border-color: transparent;
+}
+
+footer .copyright {
+    border-top: 2px solid #262626;
+}
+
+footer .copyright p {
     font-size: 15px;
+    line-height: 70px;
     color: #565656;
-    line-height: 75px;
     text-align: center;
 }
 
-@media (max-width: 992px) and (min-width: 768px) {
-    header.header .overlay {
-        padding: 0;
-    }
-
-    header.header .overlay .header-img img {
-        right: 50px;
-    }
-
-    section.feature .features .d-flex {
-        margin-bottom: 40px;
-    }
-
-    section.feature .features .d-flex h5 {
-        font-size: 20px;
-        margin-bottom: 8px;
-    }
-
-    section.feature .features .d-flex p {
-        font-size: 12px;
-        line-height: 15px;
-    }
-
-    section.feature .feature-img img {
-        margin-top: 80px;
-    }
-
-    section.option {
-        padding-top: 50px;
-    }
-
-    section.option .option-img {
-        top: 50px;
-        right: 50px;
-    }
-
-    section.option .option-img img {
-        width: 75%;
-    }
-
-    section.slider .slider-carousel .carousel-control-prev, 
-    section.slider .slider-carousel .carousel-control-next {
-        margin-top: 60px;
-    }
-    
-    footer.footer .top-footer .widget li.list-inline-item a {
-        margin-bottom: 20px;
-    }
+footer .footer .widget .content form .error {
+    color: red;
 }
 
-@media (max-width: 768px) {
-    header.header .overlay {
-        padding-top: 0;
-        padding-bottom: 400px;
-        text-align: center;
+@media (max-width: 990px) and (min-width: 768px) {
+    section.banner .overlay .banner-text button {
+        margin: 0px 0 40px;
+        width: 210px;
     }
 
-    header.header .overlay .header-img img {
-        bottom: -500px;
-        right: 25%;
+    section.banner .overlay .banner-text button:last-child {
+        margin-right: 0px;
+    }
+
+    section.feature {
+        padding: 90px 0 0;
     }
 
     section.feature .features {
-        margin-top: 50px;
+        margin-top: -40px;
+    }
+
+    section.feature .features i {
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+    }
+
+    section.banner .overlay .images img {
+        width: 115%;
+    }
+
+    section.banner .overlay .images {
+        bottom: -80px;
+        right: -80px;
+    }
+
+    section.option .options .media {
+        margin-bottom: 30px;
     }
 
     section.option {
-        padding-top: 0;
-        padding-bottom: 400px;
+        padding: 40px 0 0;
     }
 
-    section.option .option-img {
-        bottom: -300px;
+    footer .footer .widget .content ul.social-links li a {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+    }
+}
+
+@media (max-width: 767px) and (min-width: 576px) {
+    section.banner .overlay .images {
+        bottom: -500px;
+        right: 20%;
     }
 
-    section.slider .slider-carousel .carousel-control-prev, 
-    section.slider .slider-carousel .carousel-control-next {
-        display: none;
+    section.banner .overlay .app-icon img {
+        margin-top: 0px;
+        margin-bottom: 30px;
     }
 
-    section.slider .slider-carousel .carousel-inner {
-        width: 90%;
+    section.banner .overlay .banner-text {
+        margin-bottom: 350px;
+    }
+
+    section.banner .overlay .banner-text button {
+        padding: .5rem 1rem;
+        line-height: 40px;
+    }
+
+    section.banner .overlay .banner-text button img {
+        width: 40px;
+    }
+
+    section.banner .overlay .banner-text button i {
+        font-size: 40px;
+    }
+
+    section.option .images {
+        bottom: -400px;
+    }
+
+    section.option .options {
+        margin-bottom: 300px;
+    }
+}
+
+@media (max-width: 575px) {
+    section.banner .overlay .images {
+        bottom: -500px;
+        right: 5%;
+        left: 5%;
+    }
+
+    section.banner .overlay .banner-text {
+        margin-bottom: 350px;
+        text-align: center;
+    }
+
+    section.banner .overlay .app-icon img {
+        margin: 0 auto 30px;
+        display: block;
+    }
+
+    section.option .images {
+        bottom: -400px;
+    }
+
+    section.option .options {
+        margin-bottom: 300px;
+    }
+}
+
+@media (max-width: 500px) {
+    section.banner .overlay .banner-text button {
+        margin: 15px 0;
+    }
+
+    section.banner .overlay .banner-text button:last-child {
+        margin-right: 0;
+    }
+
+    section.option .options {
+        margin-right: 0;
     }
 }
